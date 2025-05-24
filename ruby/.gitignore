@@ -1,0 +1,34 @@
+# OS / Editor stuff
+.DS_Store
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Ruby specific
+*.gem
+*.rbc
+.bundle/
+vendor/
+coverage/
+InstalledFiles
+pkg/
+doc/
+tmp/
+log/
+.byebug_history
+
+# Glimmer DSL LibUI cache
+.glimmer-dsl-libui/
+
+# dotenv or local config files
+.env
+.env.local
+.env.*
+
+# If you use bundler
+Gemfile.lock
+
+# If you're packaging binaries
+*.exe
+*.app
