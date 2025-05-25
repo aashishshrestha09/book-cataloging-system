@@ -26,20 +26,51 @@ We have implemented a **Book Cataloging System** in **C#** and **Ruby** to compa
 
 ```
 .
-├── csharp/                           # 📌 C# implementation
-│   ├── Models/
-│   │   └── Book.cs                   # Book model class
-│   ├── Services/
-│   │   └── Catalog.cs                # Catalog service for book operations
-│   └── Program.cs                    # Main program entry point
-│
-├── ruby/                             # 📌 Ruby implementation
-│   ├── models/
-│   │   └── book.rb                   # Book model class
-│   ├── services/
-│   │   └── catalog.rb                # Catalog service for book operations
-│   └── main.rb                       # Main program entry point
-│
-├── README.md                         # 📖 Project overview (this file)
-└── .gitignore                        # 🗒️ Ignored files list
+├── csharp                              # 📌 C# implementation
+│   ├── App.axaml
+│   ├── App.axaml.cs
+│   ├── app.manifest
+│   ├── csharp.csproj
+│   ├── img
+│   │   ├── book-added.png
+│   │   ├── book-deleted.png
+│   │   ├── book-to-delete.png
+│   │   ├── enter-book-details.png
+│   │   ├── filter-by-title.png
+│   │   ├── report-by-author.png
+│   │   └── report-by-genre.png
+│   ├── MainWindow.axaml
+│   ├── MainWindow.axaml.cs
+│   ├── Models
+│   │   ├── Book.cs
+│   │   └── BookGroup.cs
+│   ├── Program.cs
+│   ├── README.md                       # C# info and instructions
+│   ├── Services
+│   │   └── CatalogService.cs
+│   └── ViewModels
+│       └── MainWindowViewModel.cs
+├── .gitignore
+├── README.md                           # Project overview and details
+└── ruby                                # 📌 Ruby implementation
+    ├── Gemfile
+    ├── Gemfile.lock
+    ├── img
+    │   ├── book-added.png
+    │   ├── book-deleted.png
+    │   ├── book-list.png
+    │   ├── enter-book-details.png
+    │   ├── filter-by-title.png
+    │   ├── report-by-author.png
+    │   ├── report-by-genre.png
+    │   └── select-book.png
+    ├── main.rb
+    ├── models
+    │   └── book.rb
+    ├── README.md                         # Ruby-specific info and instructions
+    ├── services
+    │   ├── book_catalog_ui.rb
+    │   └── catalog.rb
+    └── ui
+        └── book_catalog_window.rb
 ```
