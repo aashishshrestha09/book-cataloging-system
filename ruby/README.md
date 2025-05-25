@@ -34,7 +34,7 @@ A simple GUI-based desktop application for managing a catalog of books built wit
 gem install bundler
 ```
 
-2️⃣ 2️⃣ Install the required gems:
+2️⃣ Navigate to the `ruby` project directory and install the required gems:
 
 ```bash
 bundle install
@@ -72,6 +72,8 @@ This project wouldn’t have been possible without the fantastic [Glimmer DSL fo
 3️⃣ The new book will appear in the catalog list.
 
 ![Added Book](./img/book-added.png)
+
+---
 
 ### 🗑️ Delete a Book
 

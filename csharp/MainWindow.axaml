@@ -1,0 +1,112 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vm="clr-namespace:csharp.ViewModels"
+        x:Class="csharp.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Book Catalog">
+
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="Book Cataloging System"
+                   FontSize="24" HorizontalAlignment="Center"
+                   Margin="0 0 0 20"/>
+
+        <StackPanel Orientation="Vertical" Width="300" Margin="20 0 20 0">
+            <TextBlock Text="Title:"/>
+            <TextBox Watermark="Enter Book Title" Text="{Binding Title, Mode=TwoWay}"/>
+
+            <TextBlock Text="Author:"/>
+            <TextBox Watermark="Enter the Author of the Book" Text="{Binding Author, Mode=TwoWay}"/>
+
+            <TextBlock Text="Genre:"/>
+            <TextBox Watermark="Enter the Genre of the Book" Text="{Binding Genre, Mode=TwoWay}"/>
+
+            <TextBlock Text="Publication Year:"/>
+            <TextBox Watermark="Enter the Publication Year" Text="{Binding PublicationYear, Mode=TwoWay}"/>
+
+            <TextBlock Text="Price:"/>
+            <TextBox Watermark="Enter the Price" Text="{Binding Price, Mode=TwoWay}"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <Button Content="Add Book" Command="{Binding AddBookCommand}" Width="100" Margin="0 0 5 0"/>
+            </StackPanel>
+
+        </StackPanel>
+        
+        <Grid Margin="0 0 0 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 10" Grid.Row="0">
+                <TextBox Watermark="Search by Title, Author, Genre, Publication Year, or Price"
+                        Width="400"
+                        Text="{Binding SearchTerm, Mode=TwoWay}" />
+                <Button Content="Search"
+                        Command="{Binding SearchCommand}"
+                        Margin="5 0 0 0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10" Grid.Row="1">
+                <ComboBox ItemsSource="{Binding ReportTypes}" Width="200" SelectedItem="{Binding SelectedReportType, Mode=TwoWay}" />
+                <Button Content="View Report" Margin="5 0 0 0"
+                        Command="{Binding ApplyReportGroupingCommand}"
+                        IsEnabled="{Binding SelectedReportType}"/>
+            </StackPanel>
+
+            <DataGrid Grid.Row="2" Margin="0"
+                    ItemsSource="{Binding Books}"
+                    IsReadOnly="True"
+                    GridLinesVisibility="All"
+                    BorderThickness="1" BorderBrush="Gray" IsVisible="{Binding IsAllBooksViewVisible}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title" Width="*" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header="Author" Width="*" Binding="{Binding Author}" />
+                    <DataGridTextColumn Header="Genre" Width="*" Binding="{Binding Genre}" />
+                    <DataGridTextColumn Header="PublicationYear" Width="*" Binding="{Binding PublicationYear}" />
+                    <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}" />
+                    <!-- Delete button column -->
+                    <DataGridTemplateColumn Header="Actions" Width="Auto">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" 
+                                    Command="{Binding $parent[Window].DataContext.DeleteBookCommand}"
+                                    CommandParameter="{Binding}"
+                                    Width="100" Margin="0 0 5 0"
+                                />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <ItemsControl ItemsSource="{Binding BookGroups}" Grid.Row="2" Margin="0" IsVisible="{Binding !IsAllBooksViewVisible}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0 10">
+                            <TextBlock Text="{Binding GroupName}" FontWeight="Bold" FontSize="16" Background="LightGray" Padding="5" />
+                            <ItemsControl ItemsSource="{Binding Books}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Spacing="10" Margin="5">
+                                            <TextBlock Text="{Binding Title}" Width="200" />
+                                            <TextBlock Text="{Binding Author}" Width="150" />
+                                            <TextBlock Text="{Binding Genre}" Width="100" />
+                                            <TextBlock Text="{Binding PublicationYear}" Width="80" />
+                                            <TextBlock Text="{Binding Price}" Width="80" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+        </Grid>
+
+    </DockPanel>
+</Window>
