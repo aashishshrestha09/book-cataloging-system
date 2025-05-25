@@ -67,7 +67,7 @@ We have implemented a **Book Cataloging System** in **C#** and **Ruby** to compa
     ├── main.rb
     ├── models
     │   └── book.rb
-    ├── README.md                         # Ruby-specific info and instructions
+    ├── README.md                        # Ruby-specific info and instructions
     ├── services
     │   ├── book_catalog_ui.rb
     │   └── catalog.rb
