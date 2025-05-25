@@ -56,3 +56,54 @@ dotnet run
 ## 🎉 Acknowledgements
 
 This project wouldn’t have been possible without the fantastic [AvaloniaUI](https://avaloniaui.net/). Huge thanks to the maintainers and community for their brilliant work, examples, and documentation!
+
+## 📺 Simple Demo
+
+### 📖 Add a Book
+
+1️⃣ Enter book details like **Title**, **Author**, **Genre**, **Publication Year**, and **Price**.
+
+![Enter book details](./img/enter-book-details.png)
+
+2️⃣ Click the **"Add Book"** button.
+
+3️⃣ The new book will appear in the catalog list.
+
+![Added Book](./img/book-added.png)
+
+---
+
+### 🗑️ Delete a Book
+
+1️⃣ Locate the book you want to delete in the catalog table. Each entry has an `Action` column with a `Delete` button.
+
+![Book to Delete](./img/book-to-delete.png)
+
+2️⃣ Click the **"Delete"** button corresponding to that book.  
+3️⃣ The book will be removed from the catalog immediately.
+
+![Delete a Book](./img/book-deleted.png)
+
+---
+
+### 🔍 Search for Books
+
+1️⃣ Enter a search term in the `Search` box. You can search by `Title`, `Author`, `Genre`, `Publication Year`, or `Price`.
+
+2️⃣ Click the Search button to filter the catalog.
+
+3️⃣ The catalog will instantly update to show only the matching books.
+
+![Filter By title](./img/filter-by-title.png)
+
+---
+
+### 📊 View Reports (Optional)
+
+1️⃣ Use the dropdown menu to switch the report type from `All Books` to `Group by Author`, then click `View Report`.
+
+![Report By Author](./img/report-by-author.png)
+
+2️⃣ Similarly, you can select `Group by Genre` from the dropdown and click `View Report` to see the catalog grouped by genre.
+
+![Report By Genre](./img/report-by-genre.png)
