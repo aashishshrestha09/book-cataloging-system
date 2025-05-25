@@ -1,0 +1,35 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code files
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Logs
+*.log
+
+# Rider specific files
+.idea/
+
+# DotCover
+*.dotCover
+
+# Build results
+*.exe
+*.dll
+*.pdb
+
+# Publish
+publish/

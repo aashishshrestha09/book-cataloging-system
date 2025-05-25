@@ -6,7 +6,7 @@ This is a group project for **MSCS-632: Advanced Programming Languages** at Univ
 
 We have implemented a **Book Cataloging System** in **C#** and **Ruby** to compare how both languages handle similar functionalities, focusing on data storage, querying, and iteration.
 
-## 👥 Group 4 Members
+## 👥 Group 5 Members
 
 - Aashish Shrestha
 - Hasaan Ali
