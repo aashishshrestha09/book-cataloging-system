@@ -84,7 +84,7 @@ dotnet restore
 dotnet test --logger "console;verbosity=detailed
 ```
 
-For more details, see the [csharp.Tests/README.md](csharp.Tests/README.md).
+For more details, see the [csharp.Tests/README.md](../csharp.Tests/README.md).
 
 ## 📚 Features
 
