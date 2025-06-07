@@ -1,6 +1,20 @@
 # 📚 Book Cataloging System (Ruby + Glimmer DSL for LibUI)
 
+[![Ruby](https://img.shields.io/badge/Ruby-3.0%2B-red.svg)](https://www.ruby-lang.org/en/)
+[![RSpec](https://img.shields.io/badge/tested%20with-RSpec-brightgreen)](https://rspec.info/)
+[![Glimmer DSL for LibUI](https://img.shields.io/badge/Glimmer--DSL%20for%20LibUI-0.12.8-blueviolet)](https://github.com/AndyObtiva/glimmer-dsl-libui)
+
 A simple GUI-based desktop application for managing a catalog of books built with Ruby and the excellent [Glimmer DSL for LibUI](https://github.com/AndyObtiva/glimmer-dsl-libui).
+
+## 📖 Table of Contents
+
+- [Project Structure](#-project-structure)
+- [Setup Instructions](#️-setup-instructions)
+- [Run the Application](#-run-the-application)
+- [Testing](#testing)
+- [Features](#features)
+- [Acknowledgements](#-acknowledgements)
+- [Simple Demo](#-simple-demo)
 
 ## 📦 Project Structure
 
@@ -47,6 +61,29 @@ From the `ruby/` directory:
 ```bash
 ruby main.rb
 ```
+
+## Testing
+
+This project uses [RSpec](https://rspec.info/) for unit testing key functionalities of the BookCatalogUI class and its supporting services.
+
+### Test Coverage Includes:
+
+- Adding new books to the catalog
+- Deleting books from the catalog
+- Refreshing and filtering table data
+- Generating reports grouped by genre and author
+- Validation scenarios for required fields, invalid input values, and duplicate entries
+- Edge cases such as empty inputs, empty catalogs, and search queries with no results
+
+### 📌 Run the Tests:
+
+From the `ruby/` directory:
+
+```bash
+bundle exec rspec tests
+```
+
+Test results will be displayed in the terminal, showing passed and failed cases with detailed messages for easy debugging.
 
 ## 📚 Features
 
