@@ -1,0 +1,46 @@
+# Build results
+bin/
+obj/
+
+# Rider IDE
+.idea/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Logs
+*.log
+
+# Test result files
+TestResults/
+
+# Coverage results
+coverage/
+
+# Rider settings
+.idea/
+
+# DotCover reports
+*.dotCover
+
+# User-specific files (optional)
+*.userprefs
+
+# Resharper
+_ReSharper*/
+*.ReSharper*/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
