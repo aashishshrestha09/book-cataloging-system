@@ -1,6 +1,20 @@
 # 📚 Book Cataloging System (C# + AvaloniaUI)
 
+[![C#](https://img.shields.io/badge/C%23-9.0-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+[![AvaloniaUI](https://img.shields.io/badge/AvaloniaUI-11.0.0-blue.svg)](https://avaloniaui.net/)
+[![Tested with xUnit](https://img.shields.io/badge/tested%20with-xUnit-brightgreen)](https://xunit.net/)
+
 A simple desktop book cataloging system built with **C#**, **.NET**, and **[AvaloniaUI](https://avaloniaui.net/)**. It allows users to add, delete, search, and group books by genre or author with a reactive, modern desktop interface.
+
+## 📖 Table of Contents
+
+- [Project Structure](#-project-structure)
+- [Setup Instructions](#️-setup-instructions)
+- [Run the Application](#-run-the-application)
+- [Testing](#testing)
+- [Features](#features)
+- [Acknowledgements](#-acknowledgements)
+- [Simple Demo](#-simple-demo)
 
 ## 📦 Project Structure
 
@@ -45,6 +59,32 @@ From the `csharp/` directory:
 ```bash
 dotnet run
 ```
+
+## Testing
+
+Unit tests are located in a separate project directory named `csharp.Tests` within this repository.
+
+To run the tests:
+
+1️⃣ From the `csharp` project directory, navigate to the `csharp.Tests/` directory:
+
+```bash
+cd ../csharp.Tests
+```
+
+2️⃣ Restore dependencies:
+
+```bash
+dotnet restore
+```
+
+3️⃣ Run the tests:
+
+```bash
+dotnet test --logger "console;verbosity=detailed
+```
+
+For more details, see the [csharp.Tests/README.md](csharp.Tests/README.md).
 
 ## 📚 Features
 

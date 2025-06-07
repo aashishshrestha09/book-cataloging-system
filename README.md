@@ -26,7 +26,7 @@ We have implemented a **Book Cataloging System** in **C#** and **Ruby** to compa
 
 ```
 .
-├── csharp                              # 📌 C# implementation
+├── csharp                                # 📌 C# implementation
 │   ├── App.axaml
 │   ├── App.axaml.cs
 │   ├── app.manifest
@@ -45,14 +45,18 @@ We have implemented a **Book Cataloging System** in **C#** and **Ruby** to compa
 │   │   ├── Book.cs
 │   │   └── BookGroup.cs
 │   ├── Program.cs
-│   ├── README.md                       # C# info and instructions
+│   ├── README.md                         # C# info and instructions
 │   ├── Services
 │   │   └── CatalogService.cs
 │   └── ViewModels
 │       └── MainWindowViewModel.cs
-├── .gitignore
-├── README.md                           # Project overview and details
-└── ruby                                # 📌 Ruby implementation
+├── csharp.Tests                          # 📌 C# Unit Tests
+│   ├── CatalogServiceTests.cs
+│   └── csharp.Tests.csproj
+|   └── README
+├── design_document.md
+├── README.md                             # Project overview and details
+└── ruby                                  # 📌 Ruby implementation
     ├── Gemfile
     ├── Gemfile.lock
     ├── img
@@ -67,10 +71,13 @@ We have implemented a **Book Cataloging System** in **C#** and **Ruby** to compa
     ├── main.rb
     ├── models
     │   └── book.rb
-    ├── README.md                        # Ruby-specific info and instructions
+    ├── README.md                         # Ruby-specific info and instructions
     ├── services
     │   ├── book_catalog_ui.rb
     │   └── catalog.rb
+    ├── tests                             # 📌 C# Unit Tests
+    │   ├── catalog_spec.rb
+    │   └── test_book_catalog_ui_spec.rb
     └── ui
         └── book_catalog_window.rb
 ```
